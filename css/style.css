@@ -1,0 +1,33 @@
+div {
+	background: #F0F8FF;
+}
+#firstBut{
+	background:none;
+	background-image:none;
+}
+#toTheMainButton{
+	color:black;
+	text-decoration: none;
+}
+#otherButtons{
+	text-align: right;
+	color:black;
+	text-decoration: none;
+}
+
+.upperPanel{
+	background:blue;
+}
+.registrationButtons{
+	float:right;
+	background:none;
+}
+.mainBlocks{
+	height:300px;
+	display: inline-block;
+	width:300px;
+	overflow:auto;
+}
+.blocksOfRow{
+	display:inline-block;
+}
