@@ -14,11 +14,10 @@ div {
 	color:black;
 	text-decoration: none;
 }
-
-.upperPanel{
-	background:blue;
+.newUpperPanel{
+	background:#00ffff;
 }
-.registrationButtons{
+.elementsForLogin{
 	float:right;
 	background:none;
 }
