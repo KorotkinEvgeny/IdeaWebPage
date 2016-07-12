@@ -1,0 +1,43 @@
+<div class="newUpperPanel">
+    <table width="100%">
+        <tr>
+            <td align="left" width="10%">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="toTheMainButton">To the main</a>
+            </td>
+            <td align="left">
+                <input maxlength="15" size="20" id="searchString" type="text" [(ngModel)] = "filterText">
+            </td>"
+            <td align="right" width="10%" id="buttonsRegistr">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">Login</a>
+            </td>
+            <td align="right" width="8%" id="buttonsRegistr">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">Registration</a>
+            </td>
+            <td align="right" width="10%">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">ChangeLanguage</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="mainContent">
+    <div class="buttonsForparts">
+        <input type="button" value="All">
+        <input type="button" value="Sport">
+        <input type="button" value="Transport">
+        <input type="button" value="Culture">
+        <input type="button" value="Animals">
+    </div>
+    <div class="mainBlocks" id="blocksWithInfoFirstColumn">
+        <div *ngFor="let card of (cards | filterCategories : filterText )">
+            <span>
+                <img src="../image/blockImage.png">
+                <h1>{{card.id}} {{card.header}}</h1>
+                <h2>{{card.text}}</h2>
+            </span>
+            
+        </div>
+    <div class="mainBlocks" id="blocksWithInfoSecondColumns">
+    </div>
+    <div class="mainBlocks" id="blocksWithMap">
+    </div>
+</div>
