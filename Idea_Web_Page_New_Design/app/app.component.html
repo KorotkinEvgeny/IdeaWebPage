@@ -1,0 +1,98 @@
+<!--<div class="newUpperPanel">
+    <table width="100%">
+        <tr>
+            <td align="left" width="10%">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="toTheMainButton">To the main</a>
+            </td>
+            <td align="left">
+                <input maxlength="15" size="20" id="searchString" type="text" [(ngModel)]="filterText">
+            </td>"
+            <td align="right" width="10%" id="buttonsRegistr">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">Login</a>
+            </td>
+            <td align="right" width="8%" id="buttonsRegistr">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">Registration</a>
+            </td>
+            <td align="right" width="10%">
+                <a href="file:///F:/Programming/AAA/IdeaWebPage/app.html" id="otherButtons">ChangeLanguage</a>
+            </td>
+        </tr>
+    </table>
+</div>-->
+<!--<app-toolbar>
+    <div title>Idea main page</div>
+    <paper-icon-button icon="search"></paper-icon-button>
+</app-toolbar>-->
+
+<app-drawer-layout>
+    <app-drawer>
+        <div class="leftDrawerElement" *ngFor="let buttCategory of buttonsCategories">
+            <paper-item>{{buttCategory}}</paper-item>
+        </div>
+        <new-card-form>
+            <div class="containerForCardForm">
+                <h1>Card Form</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventInfo">Info</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+
+        </new-card-form>
+    </app-drawer>
+    <app-header-layout>
+        <app-header>
+            <app-toolbar>
+                <div title>Idea main page</div>
+                <!--<paper-icon-button icon="search" id="upperPanelSearchElements"></paper-icon-button>-->
+                <paper-input label="Choose category" [(ngModel)]="filterText" ngDefaultControl>
+                    <iron-icon icon="search" prefix></iron-icon>
+                </paper-input>
+            </app-toolbar>
+        </app-header>
+    </app-header-layout>
+    <div *ngFor="let card of (cards | filterCategories : filterText )" class="cards">
+        <paper-card class="cardDesign" heading="{{card.header}}">
+            <div class="cardContent" id="cardImage"><img src="../image/blockImage.png"></div>
+            <div class="cardContent">
+                <h1>{{card.id}} {{card.header}}</h1>
+                <h2>{{card.text}}</h2>
+            </div>
+        </paper-card>
+    </div>
+</app-drawer-layout>
+
+
+<!--<div class="mainContent">
+    <div class="buttonsForparts">
+        <button *ngFor="let buttCategory of buttonsCategories" (click)="onClick(buttCategory)">{{buttCategory}}</button>
+    </div>
+    <div class="mainBlocks" id="blocksWithInfoFirstColumn">
+        <div *ngFor="let card of (cards | filterCategories : filterText )">
+            <span>
+                <img src="../image/blockImage.png">
+                <h1>{{card.id}} {{card.header}}</h1>
+                <h2>{{card.text}}</h2>
+            </span>
+        </div>
+    </div>
+    <div class="mainBlocks" id="blocksWithInfoSecondColumns">
+        <div *ngFor="let card of (cards | filterByCategories : currentCategory )">
+            <span>
+                <img src="../image/blockImage.png">
+                <h1>{{card.id}} {{card.header}}</h1>
+                <h2>{{card.text}}</h2>
+                <h3>{{card.category}}</h3>
+            </span>
+        </div>
+    </div>
+    <div class="mainBlocks" id="blocksWithMap">
+    </div>
+</div>-->

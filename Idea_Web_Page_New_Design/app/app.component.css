@@ -1,0 +1,72 @@
+
+app-toolbar {
+        /* Toolbar is the main header, so give it some color */
+        background-color: #1E88E5;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        color: white;
+        --app-toolbar-font-size: 24px;
+      }
+paper-item{
+	--paper-item-min-height: 100px;
+}
+app-drawer{
+	--app-drawer-scrim-background:#7986CB;
+}
+.cards{
+	padding:50px;
+}
+paper-card{
+	width: 100%;
+	--paper-card-header: {
+		background-color: #1E88E5;
+	}
+	--paper-card-header-color: white;
+	
+}
+app-drawer-layout{
+	background-color: #E8EAF6;
+
+}
+.cardContent{
+	display:inline-block;
+	
+}
+paper-input{
+	padding-bottom: 15px;
+	padding-left: 50px;
+}
+/*paper-card.cardDesign{ @apply(--layout-horizontal);}*/
+/*#firstBut{
+	background:none;
+	background-image:none;
+}
+#toTheMainButton{
+	color:black;
+	text-decoration: none;
+}
+#otherButtons{
+	text-align: right;
+	color:black;
+	text-decoration: none;
+}
+#blocksWithMap{
+	float:right;
+}
+.newUpperPanel{
+	background:#00ffff;
+}
+
+.elementsForLogin{
+	float:right;
+	background:none;
+	width:30%;
+}
+.mainBlocks{
+	height:300px;
+	display: inline-block;
+	width:30%;
+	overflow:auto;
+}
+.blocksOfRow{
+	display:inline-block;
+}*/
